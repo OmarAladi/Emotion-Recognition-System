@@ -38,23 +38,30 @@ Emotion-Recognition-System/
 
 ## ⚙️ Installation
 
-1. Clone the repository:
+Follow these steps to set up the project:
+
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/OmarAladi/Emotion-Recognition-System.git
    cd Emotion-Recognition-System
    ```
 
-2. Create a virtual environment and install dependencies:
+2. **Create & activate a Conda environment**
 
    ```bash
-   python -m venv venv
-   source venv/bin/activate   # Linux/macOS
-   venv\Scripts\activate    # Windows
+   conda create --name emotion-env python=3.10 -y
+   conda activate emotion-env
+   ```
+
+3. **Install dependencies**
+
+   ```bash
    pip install -r requirements.txt
    ```
 
-3. Download or place your YOLO model weights inside the `models/` folder:
+4. **Add YOLO model weights**
+   Place your fine-tuned weights in the `models/` folder:
 
    * `yolov11s-face.pt`
    * `yolov11s-emotion.pt`
@@ -86,13 +93,21 @@ streamlit run streamlit.py
 
 ## 📦 Dependencies
 
-* Python >= 3.8
-* [Streamlit](https://streamlit.io/)
-* [streamlit-webrtc](https://github.com/whitphx/streamlit-webrtc)
-* [Ultralytics YOLO](https://github.com/ultralytics/ultralytics)
-* OpenCV
+Dependencies are managed via `requirements.txt`. Install all required packages within your Conda environment:
 
-*See `requirements.txt` for the full list.*
+```bash
+pip install -r requirements.txt
+```
+
+Key packages include:
+
+| Package            | Description                        |
+| ------------------ | ---------------------------------- |
+| `streamlit`        | Web application framework          |
+| `streamlit-webrtc` | Live video streaming component     |
+| `ultralytics`      | YOLOv11 training & inference       |
+| `opencv-python`    | Computer vision operations         |
+| ...                | See `requirements.txt` for details |
 
 ## 🔧 Customization
 
@@ -101,13 +116,7 @@ streamlit run streamlit.py
 
 ## 🎓 Model Training
 
-The YOLOv11 models were fine-tuned on the Roboflow dataset. To reproduce training:
-
-```bash
-# Example (adjust paths and epochs):
-ultralytics train --data dataset.yaml --model yolov11s-face.pt --epochs 50
-ultralytics train --data dataset.yaml --model yolov11s-emotion.pt --epochs 50
-```
+Fine-tuned `yolov11s-face.pt` on the Roboflow Human Face Emotions dataset to train the emotion classifier model.
 
 ## 🤝 Contributing
 
