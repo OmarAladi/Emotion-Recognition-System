@@ -41,7 +41,7 @@ Emotion-Recognition-System/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<your-username>/Emotion-Recognition-System.git
+   git clone https://github.com/OmarAladi/Emotion-Recognition-System.git
    cd Emotion-Recognition-System
    ```
 
@@ -74,15 +74,15 @@ streamlit run streamlit.py
 
 #### Live Camera Mode
 
-![Live Camera Mode](images/screenshot_1.png)
+![Live Camera Mode](images/Screenshot_1.png)
 
 #### Video Upload Mode
 
-![Video Upload Mode](images/screenshot_2.png)
+![Video Upload Mode](images/Screenshot_2.png)
 
 #### Processing Example
 
-![Processing a Video](images/screenshot_3.png)
+![Processing a Video](images/Screenshot_3.png)
 
 ## 📦 Dependencies
 
